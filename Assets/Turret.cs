@@ -18,16 +18,17 @@ public class Turret : MonoBehaviour {
 //		enemy = GameObject.FindWithTag ("Enemy").transform;
 //	}
 
-	void Update() {
-		if (enemiesInRange != null) {
-			enemy = enemiesInRange [0].transform;
-			transform.LookAt (enemy);
-		}
-	}
+//	void Update() {
+//		if (enemiesInRange != null) {
+//			enemy = enemiesInRange [0].transform;
+//			transform.LookAt (enemy);
+//		}
+//	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Enemy") {
 			enemiesInRange.Add (other.gameObject);
+			enemy = enemiesInRange [0].transform;
 			StartCoroutine ("Shooting"); //starts shooting at intervals, can be defined in inspector
 		}
 	}
@@ -42,6 +43,7 @@ public class Turret : MonoBehaviour {
 	IEnumerator Shooting() {
 		while (true) {
 			Shoot ();
+			transform.LookAt (enemy);
 			yield return new WaitForSeconds (fireRate);
 		}
 	}
@@ -49,11 +51,11 @@ public class Turret : MonoBehaviour {
 	//shooting using a RayCast
 	void Shoot() {
 		
-		EnemyL1 enemyTarget = enemy.GetComponent<EnemyL1> ();
+		//EnemyL1 enemyTarget = enemy.GetComponent<EnemyL1> ();
 
-		enemyTarget.TakeDamage (damage);
-		if (enemyTarget.isDead && (enemiesInRange != null)) {
-			enemiesInRange.RemoveAt (0);
+		enemy.GetComponent<EnemyL1>().TakeDamage (damage);
+		if (enemy.GetComponent<EnemyL1>().isDead && (enemiesInRange != null)) {
+			enemiesInRange.Remove(enemy.gameObject);
 			enemy = enemiesInRange [0].transform;
 		}
 //		RaycastHit2D hit;
