@@ -8,6 +8,8 @@ public class EnemyL1 : MonoBehaviour {
 	public float moveSpeed = 0.05f;
 	public float wallDamage = 10.0f;
 
+	public bool isDead = false;
+
 	public float attackRestTime = 10.0f;
 
 	public Vector2 centerOfMap = new Vector2 (0, 0);
@@ -16,14 +18,14 @@ public class EnemyL1 : MonoBehaviour {
 		transform.position = Vector2.MoveTowards (new Vector2 (transform.position.x, transform.position.y), centerOfMap, moveSpeed * Time.deltaTime);
 	}
 
-	public void OnTriggerEnter2D (BoxCollider2D other){
+	public void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.tag == "Wall") {
 			StartCoroutine ("AttackWall", other);
 			//other.gameObject.GetComponent<Wall> ().DamageToWall (wallDamage);
 			//Destroy(other.gameObject);
 		}
 	}
-	public void OnTriggerExit2D (BoxCollider2D other){
+	public void OnTriggerExit2D (Collider2D other){
 		if (other.gameObject.tag == "Wall") {
 			StopCoroutine ("AttackWall");
 			//other.gameObject.GetComponent<Wall> ().DamageToWall (wallDamage);
@@ -39,16 +41,15 @@ public class EnemyL1 : MonoBehaviour {
 	}
 
 	//why are the enemies not taking damage
-	public bool TakeDamage(float amount) {
+	public void TakeDamage(float amount) {
 		health -= amount;
 		if (health <= 0.0f) {
 			Die ();
-			return true;
 		}
-		return false;
 	}
 
 	void Die() {
 		Destroy (gameObject);
+		isDead = true;
 	}
 }
