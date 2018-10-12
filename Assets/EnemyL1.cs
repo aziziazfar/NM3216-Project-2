@@ -10,6 +10,8 @@ public class EnemyL1 : MonoBehaviour {
 
 	public bool isDead = false;
 
+	GameObject wall;
+
 	public float attackRestTime = 10.0f;
 
 	public Vector2 centerOfMap = new Vector2 (0, 0);
@@ -20,7 +22,8 @@ public class EnemyL1 : MonoBehaviour {
 
 	public void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.tag == "Wall") {
-			StartCoroutine ("AttackWall", other);
+			wall = other.gameObject;
+			StartCoroutine ("AttackWall");
 			//other.gameObject.GetComponent<Wall> ().DamageToWall (wallDamage);
 			//Destroy(other.gameObject);
 		}
@@ -32,9 +35,9 @@ public class EnemyL1 : MonoBehaviour {
 		}
 	}
 
-	IEnumerator AttackWall(GameObject wall)  {
+	IEnumerator AttackWall()  {
 		while (true) {
-			wall.gameObject.GetComponent<Wall> ().DamageToWall(wallDamage);
+			wall.GetComponent<Wall> ().DamageToWall(wallDamage);
 			Debug.Log ("Wall is under siege!");
 			yield return new WaitForSeconds (attackRestTime);
 		}
