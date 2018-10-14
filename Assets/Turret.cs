@@ -42,8 +42,8 @@ public class Turret : MonoBehaviour {
 
 	IEnumerator Shooting() {
 		while (true) {
+			transform.LookAt (enemy); // look at the enemy you intend to shoot
 			Shoot ();
-			transform.LookAt (enemy);
 			yield return new WaitForSeconds (fireRate);
 		}
 	}
@@ -52,9 +52,10 @@ public class Turret : MonoBehaviour {
 	void Shoot() {
 		
 		//EnemyL1 enemyTarget = enemy.GetComponent<EnemyL1> ();
-
+		
+		//damage the current enemy that turret is looking at
 		enemy.GetComponent<EnemyL1>().TakeDamage (damage);
-		if (enemy.GetComponent<EnemyL1>().isDead && (enemiesInRange != null)) {
+		if ((enemy.GetComponent<EnemyL1>().isDead && (enemiesInRange == null)) ||) { //considering that gameObject is destroyed and is now null
 			enemiesInRange.Remove(enemy.gameObject);
 			enemy = enemiesInRange [0].transform;
 		}
