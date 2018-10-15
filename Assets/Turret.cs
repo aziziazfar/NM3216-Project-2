@@ -18,12 +18,10 @@ public class Turret : MonoBehaviour {
 //		enemy = GameObject.FindWithTag ("Enemy").transform;
 //	}
 
-//	void Update() {
-//		if (enemiesInRange != null) {
-//			enemy = enemiesInRange [0].transform;
-//			transform.LookAt (enemy);
-//		}
-//	}
+	void Update() {
+		enemy = enemiesInRange [0].transform;
+		transform.LookAt (enemy);
+	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Enemy") {
@@ -42,8 +40,8 @@ public class Turret : MonoBehaviour {
 
 	IEnumerator Shooting() {
 		while (true) {
-			transform.LookAt (enemy); // look at the enemy you intend to shoot
 			Shoot ();
+			//transform.LookAt (enemy); // look at the enemy you intend to shoot
 			yield return new WaitForSeconds (fireRate);
 		}
 	}
@@ -55,7 +53,7 @@ public class Turret : MonoBehaviour {
 		
 		//damage the current enemy that turret is looking at
 		enemy.GetComponent<EnemyL1>().TakeDamage (damage);
-		if ((enemy.GetComponent<EnemyL1>().isDead && (enemiesInRange == null)) ||) { //considering that gameObject is destroyed and is now null
+		if ((enemy.GetComponent<EnemyL1>().isDead && (enemiesInRange != null))) { 
 			enemiesInRange.Remove(enemy.gameObject);
 			enemy = enemiesInRange [0].transform;
 		}
