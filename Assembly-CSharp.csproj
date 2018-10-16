@@ -56,6 +56,7 @@
      <Compile Include="Assets\EnemyL1.cs" />
      <Compile Include="Assets\Turret.cs" />
      <Compile Include="Assets\Wall.cs" />
+     <Compile Include="Assets\WallDetector.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/User/Desktop/NM3216 Project 2/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

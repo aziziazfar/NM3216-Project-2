@@ -17,24 +17,29 @@ public class Turret : MonoBehaviour {
 //	void Awake() {
 //		enemy = GameObject.FindWithTag ("Enemy").transform;
 //	}
+	void Start () {
+		StartCoroutine ("Shooting"); //starts shooting at intervals, can be defined in inspector
+	}
 
 	void Update() {
-		enemy = enemiesInRange [0].transform;
-		transform.LookAt (enemy);
+		if (enemiesInRange.Count > 0) {
+			enemy = enemiesInRange [0].transform;
+			transform.LookAt (enemy);
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Enemy") {
 			enemiesInRange.Add (other.gameObject);
-			enemy = enemiesInRange [0].transform;
-			StartCoroutine ("Shooting"); //starts shooting at intervals, can be defined in inspector
+			//enemy = enemiesInRange [0].transform;
+
 		}
 	}
 
-	void OnTriggerExit (Collider2D other) {
+	void OnTriggerExit2D (Collider2D other) {
 		if (other.gameObject.tag == "Enemy") {
 			enemiesInRange.Remove (other.gameObject);
-			StopCoroutine ("Shooting"); //end coroutine once object leaves range
+			//StopCoroutine ("Shooting"); //end coroutine once object leaves range
 		}
 	}
 
@@ -52,10 +57,13 @@ public class Turret : MonoBehaviour {
 		//EnemyL1 enemyTarget = enemy.GetComponent<EnemyL1> ();
 		
 		//damage the current enemy that turret is looking at
-		enemy.GetComponent<EnemyL1>().TakeDamage (damage);
-		if ((enemy.GetComponent<EnemyL1>().isDead && (enemiesInRange != null))) { 
-			enemiesInRange.Remove(enemy.gameObject);
+		if (enemiesInRange.Count > 0) {
 			enemy = enemiesInRange [0].transform;
+			enemy.GetComponent<EnemyL1> ().TakeDamage (damage);
+			if ((enemy.GetComponent<EnemyL1> ().isDead && (enemiesInRange != null))) { 
+				enemiesInRange.Remove (enemy.gameObject);
+				enemy = enemiesInRange [0].transform;
+			}
 		}
 //		RaycastHit2D hit;
 //		if (Physics2D.Raycast(turretLocation, enemy.transform.up, out hit)) {
