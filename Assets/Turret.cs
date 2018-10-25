@@ -7,6 +7,7 @@ public class Turret : MonoBehaviour {
 	//range can be balanced in the future by adjusting circleCollider2D radius in inspector
 	Transform enemy;
 	public Transform gunTip;
+	public float turnSpeed = 99999f;
 
 	public List<GameObject> enemiesInRange;
 
@@ -24,11 +25,20 @@ public class Turret : MonoBehaviour {
 	void Update() {
 		if (enemiesInRange.Count > 0) {
 			enemy = enemiesInRange [0].transform;
-			transform.LookAt (enemy);
+
+			LookAt (enemy, turnSpeed);
 		}
 	}
 
+	void LookAt(Transform t, float speed) {
+		Vector3 targetVector = t.position - transform.position;
+		float step = speed * Time.deltaTime;
+		transform.up = Vector2.MoveTowards (transform.up, -targetVector, step);
+		
+	}
+
 	void OnTriggerEnter2D(Collider2D other) {
+		//Debug.Log (other.gameObject.tag);
 		if (other.gameObject.tag == "Enemy") {
 			enemiesInRange.Add (other.gameObject);
 			//enemy = enemiesInRange [0].transform;

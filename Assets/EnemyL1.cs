@@ -8,14 +8,18 @@ public class EnemyL1 : MonoBehaviour {
 	public float moveSpeed = 0.05f;
 	public float wallDamage = 10.0f;
 
-	public bool shouldMove = true;
+	public int enemyReward = 1;
 
+	public bool shouldMove = true;
 	public bool isDead = false;
 
 	public float attackRestTime = 10.0f;
 
 	public Vector2 centerOfMap = new Vector2 (0, 0);
 
+//	public void start() {
+//		playerGold = GameObject.Find ("shepherd").GetComponent<Player> ().gold;
+//	}
 	public void Update() {
 		if (shouldMove) {
 			transform.position = Vector2.MoveTowards (new Vector2 (transform.position.x, transform.position.y), centerOfMap, moveSpeed * Time.deltaTime);
@@ -25,7 +29,9 @@ public class EnemyL1 : MonoBehaviour {
 	public void TakeDamage(float amount) {
 		health -= amount;
 		if (health <= 0.0f) {
+			Player.UpdateGold(enemyReward);
 			Die ();
+			Debug.Log ("KaChing KaChing!");
 		}
 	}
 	

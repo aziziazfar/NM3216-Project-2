@@ -159,3 +159,5 @@ D:\User\Documents\Unity\NM3216\Temp\bin\Debug\UnityEngine.HoloLens.xml
 D:\User\Documents\Unity\NM3216\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
 D:\User\Documents\Unity\NM3216\obj\Debug\Assembly-CSharp.dll
 D:\User\Documents\Unity\NM3216\obj\Debug\Assembly-CSharp.pdb
+C:\Users\User\Desktop\NM3216 Project 2\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\NM3216 Project 2\obj\Debug\Assembly-CSharp.dll

@@ -5,20 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 //	public float moveSpeed = 1.0f;
-//	void Update() {
-//		faceMouse ();
-//	}
 //
-//	void faceMouse(){
-//		Vector3 mousePosition = Input.mousePosition;
-//		mousePosition = Camera.main.ScreenToWorldPoint (mousePosition);
 //
-//		Vector2 direction = new Vector2 (
-//		    mousePosition.x - transform.position.x,
-//			mousePosition.y - transform.position.y
-//		);
-//
-//		transform.up = direction;
 //
 //		if (Input.GetKey (KeyCode.W)) {
 //			this.transform.Translate (transform.up * moveSpeed);
@@ -29,15 +17,37 @@ public class Player : MonoBehaviour {
 	public float moveSpeed = 1;
 	public float rotateSpeed = 12;
 	public float playerDamage = 10;
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-		float moveVector = Input.GetAxis ("Vertical");
-		float rotateVector = Input.GetAxis ("Horizontal");
+	public static int gold;
+	public int initialGold = 0;
 
-		this.transform.Translate (0f, moveVector * moveSpeed * Time.deltaTime, 0f);
-		this.transform.Rotate (0f, 0f, rotateVector * (rotateSpeed * 10) * Time.deltaTime);
+	void Awake(){
+		gold = initialGold;
 	}
+
+	public static void UpdateGold(int newGold){
+		gold += newGold;	
+	}
+
+	public static int getGold() {
+		return gold;
+	}
+
+	// Update is called once per frame
+	void Update () {
+		//float moveVector = Input.GetAxis ("Vertical");
+		//float rotateVector = Input.GetAxis ("Horizontal");
+
+		float x = Input.GetAxis ("Horizontal") * Time.deltaTime * 3.0f;
+		float z = Input.GetAxis ("Vertical") * Time.deltaTime * 3.0f;
+
+		//transform.Rotate(0, x, 0);
+		transform.Translate (x, z, 0);
+		initialGold = gold;
+	}
+}
+			//this.transform.Translate (0f, moveVector * moveSpeed * Time.deltaTime, 0f);
+
+		//this.transform.Rotate (0f, 0f, rotateVector * (rotateSpeed * 10) * Time.deltaTime);
 
 //	void OnTriggerEnter2D (Collider2D target) {
 //		if (target.gameObject.tag == "Enemy") {
@@ -49,6 +59,4 @@ public class Player : MonoBehaviour {
 //		if (Input.GetKey (KeyCode.Space)) {
 //			target.transform.GetComponent<EnemyL1> ().TakeDamage (playerDamage);
 //		}
-//	}
-		
-}
+//	

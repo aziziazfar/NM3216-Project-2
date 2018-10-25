@@ -56,7 +56,10 @@
      <Compile Include="Assets\EnemyBehaviour.cs" />
      <Compile Include="Assets\EnemyL1.cs" />
      <Compile Include="Assets\Player.cs" />
+     <Compile Include="Assets\PlayerAttackController.cs" />
+     <Compile Include="Assets\RotationController.cs" />
      <Compile Include="Assets\Turret.cs" />
+     <Compile Include="Assets\TurretBase.cs" />
      <Compile Include="Assets\Wall.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/User/Desktop/NM3216 Project 2/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
