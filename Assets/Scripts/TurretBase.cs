@@ -16,11 +16,15 @@ public class TurretBase : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
-		isPlayerOnBase = true;
+		if (other.gameObject.tag == "Player") {
+			isPlayerOnBase = true;
+		}
 	}
 
 	void OnTriggerExit2D (Collider2D other) {
-		isPlayerOnBase = false;
+		if (other.gameObject.tag == "Player") {
+			isPlayerOnBase = false;
+		}
 	}
 
 	void Update() {

@@ -24,6 +24,13 @@ public class EnemyL1 : MonoBehaviour {
 		if (shouldMove) {
 			transform.position = Vector2.MoveTowards (new Vector2 (transform.position.x, transform.position.y), centerOfMap, moveSpeed * Time.deltaTime);
 		}
+		LookAt ();
+	}
+	void LookAt() {
+		Vector3 center = new Vector3 (0.02f, -0.18f, 0f);
+		Vector3 targetVector = transform.position - center;
+		float step = 100 * Time.deltaTime;
+		transform.up = Vector2.MoveTowards (transform.up, targetVector, step);	
 	}
 
 	public void TakeDamage(float amount) {
@@ -38,6 +45,7 @@ public class EnemyL1 : MonoBehaviour {
 	void Die() {
 		Destroy (gameObject);
 		isDead = true;
+		//SpawnController.killedEnemy ();
 	}
 //	public void OnTriggerEnter2D (Collider2D other){
 //		if (other.gameObject.tag == "Wall") {

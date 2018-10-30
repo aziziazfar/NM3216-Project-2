@@ -71,7 +71,9 @@ public class Turret : MonoBehaviour {
 			enemy.GetComponent<EnemyL1> ().TakeDamage (damage);
 			if ((enemy.GetComponent<EnemyL1> ().isDead && (enemiesInRange != null))) { 
 				enemiesInRange.Remove (enemy.gameObject);
-				enemy = enemiesInRange [0].transform;
+				if (enemiesInRange.Count > 0) {
+					enemy = enemiesInRange [0].transform;
+				}
 			}
 			if ((enemy.GetComponent<EnemyL1> ().isDead && (enemiesInRange == null))) { 
 				enemiesInRange.Remove (enemy.gameObject);

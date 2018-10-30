@@ -44,7 +44,6 @@ public class Player : MonoBehaviour {
 		transform.Translate (x, z, 0);
 		initialGold = gold;
 	}
-}
 			//this.transform.Translate (0f, moveVector * moveSpeed * Time.deltaTime, 0f);
 
 		//this.transform.Rotate (0f, 0f, rotateVector * (rotateSpeed * 10) * Time.deltaTime);
@@ -55,8 +54,10 @@ public class Player : MonoBehaviour {
 //		}
 //	}
 //
-//	void Attack(GameObject target){
-//		if (Input.GetKey (KeyCode.Space)) {
-//			target.transform.GetComponent<EnemyL1> ().TakeDamage (playerDamage);
-//		}
+	void Attack(GameObject target){
+		if (Input.GetKey (KeyCode.Space)) {
+			target.transform.GetComponent<EnemyL1> ().TakeDamage (playerDamage);
+		}
+	}
+}
 //	

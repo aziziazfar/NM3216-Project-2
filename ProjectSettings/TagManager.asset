@@ -46,9 +46,9 @@ TagManager:
   - name: Background
     uniqueID: 983426385
     locked: 0
-  - name: Turrets
-    uniqueID: 33486865
-    locked: 0
   - name: GameCharacters
     uniqueID: 2183693651
+    locked: 0
+  - name: Turrets
+    uniqueID: 33486865
     locked: 0

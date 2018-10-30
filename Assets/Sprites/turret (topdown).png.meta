@@ -1,8 +1,7 @@
 fileFormatVersion: 2
 guid: cb654ff3864838f468141a7570edddef
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: turret (topdown)_0
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -41,17 +40,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.42875838, y: 0.52953106}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 141, y: 175, z: 196, w: 155}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -70,63 +69,13 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: turret (topdown)_0
-      rect:
-        serializedVersion: 2
-        x: 186
-        y: 226
-        width: 57
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9666648f6e15d824b8628e362c84cdef
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    outline:
-    - - {x: -34, y: -32}
-      - {x: -49, y: -11}
-      - {x: -66, y: 3}
-      - {x: -64, y: 40}
-      - {x: -34, y: 51}
-      - {x: -7, y: 40}
-      - {x: -3.7098846, y: 7.0989075}
-      - {x: -22, y: -11}
+    sprites: []
+    outline: []
     physicsShape: []
     bones: []
-    spriteID: 06b5e0a8cd51d5a4080c7c4c74c56510
+    spriteID: 313c577baadf1f44a892d6eb8b755aba
     vertices: []
     indices: 
     edges: []

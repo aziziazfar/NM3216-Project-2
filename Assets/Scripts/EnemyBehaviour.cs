@@ -44,7 +44,9 @@ public class EnemyBehaviour : MonoBehaviour {
 	IEnumerator AttackWall()  {
 		while (true) {
 			//transform.position = currentPos;
-			parent.AttackWall (wall);
+			if (wall != null) {
+				parent.AttackWall (wall);
+			}
 			yield return new WaitForSeconds (attackRestTime);
 		}
 	}
