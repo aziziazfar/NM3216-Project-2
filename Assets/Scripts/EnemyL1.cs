@@ -72,7 +72,7 @@ public class EnemyL1 : MonoBehaviour {
 
 	public void AttackWall(GameObject wall) {
 		wall.GetComponent<Wall> ().DamageToWall(wallDamage);
-		Debug.Log ("Wall is under siege!");
+		//Debug.Log ("Wall is under siege!");
 	}
 
 	//why are the enemies not taking damage

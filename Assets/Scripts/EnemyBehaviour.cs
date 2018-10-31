@@ -26,12 +26,6 @@ public class EnemyBehaviour : MonoBehaviour {
 			//other.gameObject.GetComponent<Wall> ().DamageToWall (wallDamage);
 			//Destroy(other.gameObject);
 		}
-		if (other.gameObject.tag == "Player") {
-			player = other.gameObject;
-			if (Input.GetKey (KeyCode.Space)) {
-				parent.TakeDamage (player.GetComponent<Player> ().playerDamage);
-			}
-		}
 	}
 	public void OnTriggerExit2D (Collider2D other){
 		if (other.gameObject.tag == "Wall") {

@@ -55,9 +55,7 @@ public class Player : MonoBehaviour {
 //	}
 //
 	void Attack(GameObject target){
-		if (Input.GetKey (KeyCode.Space)) {
-			target.transform.GetComponent<EnemyL1> ().TakeDamage (playerDamage);
-		}
+		target.transform.GetComponent<EnemyL1> ().TakeDamage (playerDamage);
 	}
 }
 //	
