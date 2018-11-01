@@ -1,0 +1,9 @@
+Current version:
++ UI Popup works fine
++ Attck works fine
++ Basic upgrade works fine
+
+- Upgrade only works for a single instance.
+eg up lv 1 -> 2 , then stop there.
+- Player still goes through walls
+
