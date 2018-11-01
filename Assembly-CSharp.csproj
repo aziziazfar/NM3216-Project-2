@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\SpawnController.cs" />
      <Compile Include="Assets\Scripts\Turret.cs" />
      <Compile Include="Assets\Scripts\TurretBase.cs" />
+     <Compile Include="Assets\Scripts\UIAppear.cs" />
      <Compile Include="Assets\Scripts\Wall.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/User/Desktop/NM3216 Project 2/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
