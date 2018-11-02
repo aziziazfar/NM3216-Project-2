@@ -9,20 +9,34 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
+<<<<<<< HEAD
   m_RootGameObject: {fileID: 1773025641727256}
   m_IsPrefabAsset: 1
 --- !u!1 &1773025641727256
+=======
+  m_RootGameObject: {fileID: 1194525217718028}
+  m_IsPrefabAsset: 1
+--- !u!1 &1194525217718028
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4466223867717900}
   - component: {fileID: 58989751977472944}
   - component: {fileID: 114591001946452924}
   - component: {fileID: 331152888890873362}
   - component: {fileID: 212969031121845812}
+=======
+  - component: {fileID: 4809147241806918}
+  - component: {fileID: 58508716143003650}
+  - component: {fileID: 114170950483279460}
+  - component: {fileID: 331150220915101448}
+  - component: {fileID: 212043253420757424}
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
   m_Layer: 0
   m_Name: TurretL3
   m_TagString: TurretL3
@@ -30,12 +44,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &4466223867717900
+=======
+--- !u!4 &4809147241806918
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1773025641727256}
+=======
+  m_GameObject: {fileID: 1194525217718028}
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.5, y: -6.61, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
@@ -43,12 +65,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!58 &58989751977472944
+=======
+--- !u!58 &58508716143003650
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1773025641727256}
+=======
+  m_GameObject: {fileID: 1194525217718028}
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -58,12 +88,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 65.2
+<<<<<<< HEAD
 --- !u!114 &114591001946452924
+=======
+--- !u!114 &114170950483279460
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1773025641727256}
+=======
+  m_GameObject: {fileID: 1194525217718028}
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ed2901b135bcc6478749255a9d89ce5, type: 3}
@@ -74,12 +112,20 @@ MonoBehaviour:
   enemiesInRange: []
   fireRate: 1
   damage: 60
+<<<<<<< HEAD
 --- !u!212 &212969031121845812
+=======
+--- !u!212 &212043253420757424
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1773025641727256}
+=======
+  m_GameObject: {fileID: 1194525217718028}
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -110,7 +156,11 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8360278fb0274b74999ce78d2a728671, type: 3}
+<<<<<<< HEAD
   m_Color: {r: 0, g: 0.06715846, b: 1, a: 1}
+=======
+  m_Color: {r: 1, g: 0.65517235, b: 0, a: 1}
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,12 +170,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!331 &331152888890873362
+=======
+--- !u!331 &331150220915101448
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
 SpriteMask:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1773025641727256}
+=======
+  m_GameObject: {fileID: 1194525217718028}
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -155,7 +213,11 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: cb654ff3864838f468141a7570edddef, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: 8360278fb0274b74999ce78d2a728671, type: 3}
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: 0
   m_BackSortingLayerID: 0

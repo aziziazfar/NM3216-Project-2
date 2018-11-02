@@ -7,11 +7,17 @@ TagManager:
   - Enemy
   - Wall
   - Turret
+<<<<<<< HEAD
   - TurretBase
   - TurretL1
   - TurretL2
   - TurretL3
   - TurretL4
+=======
+  - TurretL1
+  - TurretL2
+  - TurretL3
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
   layers:
   - Default
   - TransparentFX

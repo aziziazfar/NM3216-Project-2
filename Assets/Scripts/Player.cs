@@ -5,6 +5,19 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
+<<<<<<< HEAD
+=======
+	//	public float moveSpeed = 1.0f;
+	//
+	//
+	//
+	//		if (Input.GetKey (KeyCode.W)) {
+	//			this.transform.Translate (transform.up * moveSpeed);
+	//		}
+	//	}
+
+	//to control and rotate using 'wasd'
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
 	public float moveSpeed = 1;
 	public float rotateSpeed = 12;
 	public float playerDamage = 10;
@@ -19,6 +32,24 @@ public class Player : MonoBehaviour {
 	private GameObject canvas;
 
 	private bool shouldDestroy = false;
+	private bool isPlayerNearTurret = false;
+
+	[SerializeField]
+	private int currentTurretLvl;
+
+	[Header("Turret Level Prefabs")]
+	public GameObject turretL1;
+	public GameObject turretL2;
+	public GameObject turretL3;
+	public GameObject turretL4;
+
+	private GameObject toDestroy;
+
+	[Header("Gold Cost")]
+	public int l1Cost = 5;
+	public int l2Cost = 7;
+	public int l3Cost = 9;
+	public int l4Cost = 10;
 
 	//Turret Upgrading
 	[SerializeField]
@@ -93,6 +124,10 @@ public class Player : MonoBehaviour {
 			//
 			//			item.transform.SetParent (transform, false);
 			//			item.transform.position = playerPos;
+<<<<<<< HEAD
+=======
+			toDestroy = target.gameObject;
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
 
 			if (instance == null)
 				CreatePopUp ();
@@ -101,7 +136,10 @@ public class Player : MonoBehaviour {
 			StartCoroutine (DestroyPopUps(instance));
 			StopCoroutine (DestroyPopUps (instance));
 
+<<<<<<< HEAD
 			toDestroy = target.gameObject;
+=======
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
 			if (target.gameObject.tag == "TurretL1") {
 				isPlayerNearTurret = true;
 				currentTurretLvl = 1;

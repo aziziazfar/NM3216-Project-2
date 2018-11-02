@@ -7,7 +7,11 @@
       <File FileName="Assets\Scripts\EnemyBehaviour.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EnemyL1.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Turret.cs" Line="1" Column="1" />
+<<<<<<< HEAD
       <File FileName="Assets\Scripts\Player.cs" Line="164" Column="1" />
+=======
+      <File FileName="Assets\Scripts\Player.cs" Line="89" Column="39" />
+>>>>>>> d0d27b5ee317ce743ae8dde11bd6e350f2676626
       <File FileName="Assets\Scripts\Wall.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayerAttackController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\RotationController.cs" Line="1" Column="1" />
